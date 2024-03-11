@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="threeServerOnJava">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/threeServerOnJava.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
