@@ -9,5 +9,4 @@ java -jar threeServerOnJava.jar
 ```
 docker-compose up
 ```
-
-# slava
+ 
