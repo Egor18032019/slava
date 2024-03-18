@@ -3,14 +3,12 @@ version: '2.4'
 services:
   server:
     image: eclipse-temurin:17-jre-alpine
-#    command: ["java", "-jar", "threeServerOnJava.jar", "-p", "catalog.json", "-n", "catalog.json"]
     command: ["java", "-jar", "threeServerOnJava.jar", "-n", "catalog.json"]
     ports:
       - "0.0.0.0:8081:8080"
 #    restart: always
     volumes:
-      - ./:/app/
-#      - ./catalog.json:/app/catalog.json
+      - ./catalog:/app/
     working_dir: /app
 
 # docker network create app
