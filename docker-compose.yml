@@ -2,10 +2,19 @@ version: '2.4'
 
 services:
   server:
- # либо image, либо build
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: eclipse-temurin:17-jre-alpine
+#    command: ["java", "-jar", "threeServerOnJava.jar", "-p", "catalog.json", "-n", "catalog.json"]
+    command: ["java", "-jar", "threeServerOnJava.jar", "-n", "catalog.json"]
     ports:
-      - "8080:8080"
-    restart: always
+      - "0.0.0.0:8081:8080"
+#    restart: always
+    volumes:
+      - ./:/app/
+#      - ./catalog.json:/app/catalog.json
+    working_dir: /app
+
+# docker network create app
+networks:
+  default:
+    external:
+      name: "app"

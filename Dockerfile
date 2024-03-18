@@ -1,7 +1,7 @@
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 # создаем директорию app в новом слое образа.
-COPY threeServerOnJava.jar ./threeServerOnJava.jar
+COPY catalog/threeServerOnJava.jar ./threeServerOnJava.jar
 #- копируем  наш jar-ник в папку app.
 COPY catalog.json ./catalog.json
 #- копируем  наш jjson в папку app.
@@ -11,5 +11,5 @@ COPY catalog.json ./catalog.json
 #USER javauser
 EXPOSE 8080
 # - отмечаем на каком порту желательно что бы работал наш контейнер
-CMD ["java", "-jar", "threeServerOnJava.jar"]
+CMD ["java", "-jar", "threeServerOnJava.jar", " -n catalog.json"]
 #- запускаем наше приложение в контейнере.
