@@ -10,7 +10,7 @@ java -jar threeServerOnJava.jar -p catalog.json -n catalog.json
 java -jar threeServerOnJava.jar -n catalog.json 
 ``` 
 
-* Запустить проект в докер образе.(не работает как надо)
+* Запустить проект в докер образе.
 
 ```
 docker-compose up
