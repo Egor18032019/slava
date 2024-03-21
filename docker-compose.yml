@@ -5,7 +5,7 @@ services:
     image: eclipse-temurin:17-jre-alpine
     command: ["java", "-jar", "threeServerOnJava.jar", "-n", "catalog.json"]
     ports:
-      - "0.0.0.0:8081:8080"
+      - "0.0.0.0:8080:8080"
 #    restart: always
     volumes:
       - ./catalog:/app/
