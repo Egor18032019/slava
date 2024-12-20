@@ -3,7 +3,7 @@ version: '2.4'
 services:
   server:
     image: eclipse-temurin:17-jre-alpine
-    command: ["java", "-jar", "threeServerOnJava.jar", "-n", "catalog.json"]
+    command: ["java", "-jar", "threeServerOnJava.jar" ]
     ports:
       - "0.0.0.0:8080:8080"
 #    restart: always
